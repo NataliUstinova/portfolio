@@ -2,9 +2,6 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
 
 export const links = [
   {
@@ -62,25 +59,35 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Onboarding UI library and Web Player",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
-    imageUrl: corpcommentImg,
+      "UI components library and web player for the onboarding process. Used in projects with different color schemes and settings.",
+    tags: ["React", "Tailwind", "themes", "webpack", "Framer"],
+    imageUrl:
+      "https://s3.eu-north-1.amazonaws.com/docs.sum/images/astrofy/onboarding.png",
   },
   {
-    title: "rmtDev",
+    title: "Quicks Plugin",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: rmtdevImg,
+      "I contributed to the development of the web plugin frontend. Worked on the landing page, onboarding process, payment integration, and the actual plugin frontend.",
+    tags: ["React", "Tailwind", "Redux", "ChatGPT API", "Paypro", "AWS"],
+    imageUrl:
+      "https://s3.eu-north-1.amazonaws.com/docs.sum/images/Quick+Insights.jpg",
   },
   {
-    title: "Word Analytics",
+    title: "Newmoon Project",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: wordanalyticsImg,
+      "I worked as a frontend developer on this project. Users can chat with an AI that uses the GPT-4 API.",
+    tags: [
+      "React",
+      "Tailwind",
+      "ChatGPT API",
+      "Redux",
+      "Websocket",
+      "Solidgate",
+    ],
+    imageUrl:
+      "https://s3.eu-north-1.amazonaws.com/docs.sum/images/astrofy/Astrological.jpg",
   },
 ] as const;
 

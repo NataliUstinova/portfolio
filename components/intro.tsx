@@ -11,7 +11,7 @@ import useExperienceYears from "@/hooks/useExperienceYears";
 const Intro = () => {
   const experienceYears = useExperienceYears({ startYear: 2022 });
   return (
-    <section>
+    <section id="home" className="scroll-mt-40">
       <div className="flex flex-col items-center justify-center mb-24 sm:mb-0">
         <div className="relative">
           <motion.div
@@ -49,9 +49,11 @@ const Intro = () => {
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
-          Hello, I'm <span className="font-bold">Natalia Ustinova.</span> I'm a{" "}
-          <span className="font-bold">frontend developer</span> based in Cyprus
-          🇨🇾 with <span className="font-bold">{experienceYears} years</span> of
+          {`Hello, I'm `}
+          <span className="font-bold">Natalia Ustinova.</span>
+          {`I'm a`} <span className="font-bold">frontend developer</span> based
+          in Cyprus 🇨🇾 with{" "}
+          <span className="font-bold">{experienceYears} years</span> of
           commercial experience. My focus is{" "}
           <span className="font-bold">React & Next.js</span>.
         </motion.h1>
