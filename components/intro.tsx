@@ -7,21 +7,12 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import useExperienceYears from "@/hooks/useExperienceYears";
 const Intro = () => {
-  const calculateExperienceYears = () => {
-    const january2022: Date = new Date("2022-01-01");
-    const currentDate: Date = new Date();
-    // @ts-ignore
-    const timeDifference: number = currentDate - january2022;
-    const yearsDifference: number =
-      timeDifference / (1000 * 60 * 60 * 24 * 365.25);
-    return Math.ceil(yearsDifference);
-  };
-
-  const experienceYears = calculateExperienceYears();
+  const experienceYears = useExperienceYears({ startYear: 2022 });
   return (
     <section>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center mb-24 sm:mb-0">
         <div className="relative">
           <motion.div
             initial={{ scale: 0, opacity: 0 }}
@@ -54,7 +45,7 @@ const Intro = () => {
           </motion.span>
         </div>
         <motion.h1
-          className="text-center mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+          className="xl:max-w-[55%] text-center mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
