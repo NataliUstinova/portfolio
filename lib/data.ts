@@ -70,7 +70,7 @@ export const projectsData = [
     title: "Quicks Plugin",
     description:
       "I contributed to the development of the web plugin frontend. Worked on the landing page, onboarding process, payment integration, and the actual plugin frontend.",
-    tags: ["React", "Tailwind", "Redux", "ChatGPT API", "Paypro", "AWS"],
+    tags: ["React", "Tailwind", "Redux", "ChatGPT API", "AWS", "Paypro"],
     imageUrl:
       "https://s3.eu-north-1.amazonaws.com/docs.sum/images/Quick+Insights.jpg",
   },
