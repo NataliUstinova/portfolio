@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React from "react";
 import Image from "next/image";
 import { default as pic } from "@/public/about-me-pic.png";
 import { motion } from "framer-motion";
@@ -8,20 +8,11 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
 import useExperienceYears from "@/hooks/useExperienceYears";
-import { useInView } from "react-intersection-observer";
-import { useActiveSectionContext } from "@/contexts/active-section-context";
+import useSectionInView from "@/hooks/useSectionInView";
 const Intro = () => {
   const experienceYears = useExperienceYears({ startYear: 2022 });
-  const { ref, inView } = useInView({
-    threshold: 0.5,
-  });
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext();
+  const { ref } = useSectionInView({ sectionName: "Home", threshold: 0.5 });
 
-  useEffect(() => {
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("Home");
-    }
-  }, [inView, setActiveSection]);
   return (
     <section ref={ref} id="home" className="scroll-mt-40">
       <div className="flex flex-col items-center justify-center mb-24 sm:mb-0">
