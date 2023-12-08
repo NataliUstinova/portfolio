@@ -87,7 +87,7 @@ const Intro = () => {
           <a
             className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 
             hover:scale-110 border border-black/10 active:scale-105 transition-all duration-300 ease-in-out cursor-pointer dark:bg-white/10"
-            href="/CV.pdf"
+            href="/Natalia_Ustinova_Frontend_Developer_CV.pdf"
             download
           >
             Download CV
