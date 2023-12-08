@@ -10,6 +10,8 @@ import { FaGithubSquare } from "react-icons/fa";
 import useExperienceYears from "@/hooks/useExperienceYears";
 import useSectionInView from "@/hooks/useSectionInView";
 import { useActiveSectionContext } from "@/contexts/active-section-context";
+// @ts-ignore
+import { gtag } from "ga-gtag";
 const Intro = () => {
   const experienceYears = useExperienceYears({ startYear: 2022 });
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
@@ -78,6 +80,10 @@ const Intro = () => {
             onClick={() => {
               setActiveSection("Contact");
               setTimeOfLastClick(Date.now());
+              gtag("event", "contact_me_button_click", {
+                event_category: "contact_me_button_click",
+                event_label: "contact_me_button_click",
+              });
             }}
           >
             Contact me here
@@ -89,6 +95,12 @@ const Intro = () => {
             hover:scale-110 border border-black/10 active:scale-105 transition-all duration-300 ease-in-out cursor-pointer dark:bg-white/10"
             href="/Natalia_Ustinova_Frontend_Developer_CV.pdf"
             download
+            onClick={() => {
+              gtag("event", "download_cv_button_click", {
+                event_category: "download_cv_button_click",
+                event_label: "download_cv_button_click",
+              });
+            }}
           >
             Download CV
             <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
@@ -98,6 +110,12 @@ const Intro = () => {
             hover:scale-[1.15] border border-black/10 active:scale-[1.15] transition-all duration-300 ease-in-out cursor-pointer dark:bg-white/10 dark:text-white/60"
             href="https://www.linkedin.com/in/natalia-ustinova-03ba6a92/"
             target="_blank"
+            onClick={() => {
+              gtag("event", "linkedin_button_click", {
+                event_category: "linkedin_button_click",
+                event_label: "linkedin_button_click",
+              });
+            }}
           >
             <BsLinkedin />
           </a>
@@ -106,6 +124,12 @@ const Intro = () => {
             hover:scale-[1.15] border border-black/10 active:scale-[1.15] transition-all duration-300 ease-in-out cursor-pointer dark:bg-white/10 dark:text-white/60"
             href="https://github.com/NataliUstinova"
             target="_blank"
+            onClick={() => {
+              gtag("event", "github_button_click", {
+                event_category: "github_button_click",
+                event_label: "github_button_click",
+              });
+            }}
           >
             <FaGithubSquare />
           </a>
