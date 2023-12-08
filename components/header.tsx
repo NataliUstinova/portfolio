@@ -5,6 +5,8 @@ import { links } from "@/lib/data";
 import Link from "next/link";
 import clsx from "clsx";
 import { useActiveSectionContext } from "@/contexts/active-section-context";
+// @ts-ignore
+import { gtag } from "ga-gtag";
 
 const Header = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -41,6 +43,10 @@ const Header = () => {
                 onClick={() => {
                   setTimeOfLastClick(Date.now());
                   setActiveSection(link.name);
+                  gtag("event", "click", {
+                    event_category: "navigation",
+                    event_label: link.name,
+                  });
                 }}
               >
                 {link.name}
