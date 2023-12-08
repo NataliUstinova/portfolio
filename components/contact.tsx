@@ -34,11 +34,17 @@ const Contacts = () => {
       <SectionHeading>Contact Me</SectionHeading>
       <p className="text-gray-700 -mt-6">
         Please, contact me directly at{" "}
-        <a href="mailto:nata@purple.studio">nata@purple.studio</a>
+        <a
+          href="mailto:nata@purple.studio"
+          className="font-semibold hover:opacity-80 active:opacity-80"
+        >
+          nata@purple.studio
+        </a>
       </p>
       <form
         className="mt-10 flex flex-col"
         action={async (formData) => {
+          // @ts-ignore
           const { data, error } = await sendEmail(formData);
           if (error) {
             toast.error(error);
