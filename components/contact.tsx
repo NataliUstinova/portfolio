@@ -45,7 +45,7 @@ const Contacts = () => {
         className="mt-10 flex flex-col dark:text-black"
         action={async (formData) => {
           // @ts-ignore
-          const { data, error } = await sendEmail(formData);
+          const { error } = await sendEmail(formData);
           if (error) {
             toast.error(error);
             return;
@@ -58,14 +58,14 @@ const Contacts = () => {
           type="email"
           required
           maxLength={500}
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-14 px-4 rounded-lg borderBlack focus:outline-black dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           placeholder="Your email"
         />
         <textarea
           name="message"
           required
           maxLength={5000}
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-52 my-3 rounded-lg borderBlack focus:outline-black p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
           placeholder="Your message"
         />
         <SubmitButton />

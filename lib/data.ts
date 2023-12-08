@@ -109,4 +109,10 @@ export const skillsData = [
   "MongoDB",
   "AWS",
   "MS AZURE",
+  "Solidgate",
+  "Paypro",
+  "ChatGPT API",
+  "Websocket",
+  "Webpack",
+  "Figma",
 ] as const;
