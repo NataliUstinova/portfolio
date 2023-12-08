@@ -37,6 +37,12 @@ const Contacts = () => {
       <p className="text-gray-700 -mt-6 dark:text-white/70">
         Please, contact me directly at{" "}
         <a
+          onClick={() => {
+            gtag("event", "email_clicked", {
+              event_category: "engagement",
+              event_label: "email_clicked",
+            });
+          }}
           href="mailto:nata@purple.studio"
           className="font-semibold hover:opacity-80 active:opacity-80 dark:text-white/70 dark:hover:text-white dark:active:text-white"
         >
