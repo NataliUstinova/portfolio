@@ -23,14 +23,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-EFEDWGHWZP" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-L0BDF30RH9" />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
  
-          gtag('config', 'G-EFEDWGHWZP');
+          gtag('config', 'G-L0BDF30RH9');
         `}
       </Script>
       <body
