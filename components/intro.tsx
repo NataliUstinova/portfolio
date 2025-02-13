@@ -52,14 +52,13 @@ const Intro = () => {
           </motion.span>
         </div>
         <motion.h1
-          className="xl:max-w-[55%] text-center mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+          className="xl:max-w-[50%] text-center mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
           initial={{ opacity: 0, y: 100 }}
           animate={{ opacity: 1, y: 0 }}
         >
           {`Hello, I'm `}
-          <span className="font-bold">Natalia Ustinova.</span>
-          {`I'm a`} <span className="font-bold">frontend developer</span> based
-          in Cyprus 🇨🇾 with{" "}
+          <span className="font-bold">Natalia Ustinova. </span>
+          {`I'm a`} <span className="font-bold">frontend developer</span> with{" "}
           <span className="font-bold">{experienceYears} years</span> of
           commercial experience. My focus is{" "}
           <span className="font-bold">React & Next.js</span>.
