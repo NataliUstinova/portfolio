@@ -13,7 +13,7 @@ import { useActiveSectionContext } from "@/contexts/active-section-context";
 // @ts-ignore
 import { gtag } from "ga-gtag";
 const Intro = () => {
-  const experienceYears = useExperienceYears({ startYear: 2022 });
+  const experienceYears = useExperienceYears({ startYear: 2021 });
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const { ref } = useSectionInView({ sectionName: "Home", threshold: 0.5 });
 
