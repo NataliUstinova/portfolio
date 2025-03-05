@@ -67,6 +67,7 @@ export const projectsData = [
       "Tailwind",
       "ChatGPT API",
       "Animation",
+      "i18n",
       "Websocket",
       "Solidgate",
     ],
