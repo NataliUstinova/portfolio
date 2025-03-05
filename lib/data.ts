@@ -59,12 +59,29 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Onboarding UI library and Web Player",
+    title: "Newme Project",
+    description:
+      "I worked as a frontend developer on this project. Users can create content with the help of AI.",
+    tags: [
+      "React",
+      "Tailwind",
+      "ChatGPT API",
+      "Animation",
+      "Websocket",
+      "Solidgate",
+    ],
+    imageUrl:
+      "https://s3.eu-north-1.amazonaws.com/docs.sum/images/newme-thumb+(1).png",
+    url: "https://en.newme.io/",
+  },
+  {
+    title: "Onboarding UI Kit and Web Player",
     description:
       "UI components library and web player for the onboarding process. Used in projects with different color schemes and settings.",
-    tags: ["React", "Tailwind", "themes", "webpack", "Framer"],
+    tags: ["React", "Tailwind", "themes", "Webpack", "Framer"],
     imageUrl:
       "https://s3.eu-north-1.amazonaws.com/docs.sum/images/astrofy/onboarding.png",
+    url: "https://purple.studio/",
   },
   {
     title: "Quicks Plugin",
@@ -73,21 +90,7 @@ export const projectsData = [
     tags: ["React", "Tailwind", "Redux", "ChatGPT API", "AWS", "Paypro"],
     imageUrl:
       "https://s3.eu-north-1.amazonaws.com/docs.sum/images/Quick+Insights.jpg",
-  },
-  {
-    title: "Newmoon Project",
-    description:
-      "I worked as a frontend developer on this project. Users can chat with an AI that uses the GPT-4 API.",
-    tags: [
-      "React",
-      "Tailwind",
-      "ChatGPT API",
-      "Redux",
-      "Websocket",
-      "Solidgate",
-    ],
-    imageUrl:
-      "https://s3.eu-north-1.amazonaws.com/docs.sum/images/astrofy/Astrological.jpg",
+    url: "https://quicks.ai/",
   },
 ] as const;
 
@@ -99,11 +102,12 @@ export const skillsData = [
   "React",
   "Redux",
   "RTK Query",
+  "Zustand",
   "Next.js",
   "Node.js",
   "Express",
   "Git",
-  "Tailwind",
+  "Tailwind CSS",
   "Framer Motion",
   "Prisma",
   "MongoDB",

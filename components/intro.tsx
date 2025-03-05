@@ -13,7 +13,7 @@ import { useActiveSectionContext } from "@/contexts/active-section-context";
 // @ts-ignore
 import { gtag } from "ga-gtag";
 const Intro = () => {
-  const experienceYears = useExperienceYears({ startYear: 2021 });
+  const experienceYears = useExperienceYears({ startYear: 2022 });
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
   const { ref } = useSectionInView({ sectionName: "Home", threshold: 0.5 });
 
@@ -58,8 +58,7 @@ const Intro = () => {
         >
           {`Hello, I'm `}
           <span className="font-bold">Natalia Ustinova.</span>
-          {`I'm a`} <span className="font-bold">frontend developer</span> based
-          in Cyprus 🇨🇾 with{" "}
+          {`I'm a`} <span className="font-bold">frontend developer</span> with{" "}
           <span className="font-bold">{experienceYears} years</span> of
           commercial experience. My focus is{" "}
           <span className="font-bold">React & Next.js</span>.
