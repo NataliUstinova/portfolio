@@ -108,7 +108,7 @@ const Intro = () => {
           <a
             className="group bg-white p-4 flex items-center gap-2 rounded-full outline-none focus:scale-[1.15] text-gray-700 hover:text-gray-950 active:text-gray-950
             hover:scale-[1.15] border border-black/10 active:scale-[1.15] transition-all duration-300 ease-in-out cursor-pointer dark:bg-white/10 dark:text-white/60"
-            href="https://www.linkedin.com/in/natalia-ustinova-03ba6a92/"
+            href="https://www.linkedin.com/in/natalia-ustinova-frontend/"
             target="_blank"
             onClick={() => {
               gtag("event", "linkedin_button_click", {
