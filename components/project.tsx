@@ -5,6 +5,7 @@ import { projectsData } from "@/lib/data";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
+import posthog from "posthog-js";
 
 type ProjectProps = typeof projectsData[number];
 
@@ -32,7 +33,13 @@ export default function Project({
       }}
       className=" mb-3 sm:mb-8 last:mb-0"
     >
-      <Link href={url} target="_blank">
+      <Link
+        href={url}
+        target="_blank"
+        onClick={() => {
+          posthog.capture("project-clicked", { url: url });
+        }}
+      >
         <section
           className="group bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative 
       sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20"

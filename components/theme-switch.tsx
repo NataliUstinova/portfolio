@@ -4,6 +4,7 @@ import { BsMoon, BsSun } from "react-icons/bs";
 import { useTheme } from "@/contexts/theme-context";
 // @ts-ignore
 import { gtag } from "ga-gtag";
+import posthog from "posthog-js";
 const ThemeSwitch = () => {
   const { theme, toggleTheme } = useTheme();
   const handleClick = () => {
@@ -12,6 +13,7 @@ const ThemeSwitch = () => {
       event_category: "theme",
       event_label: "theme_switch",
     });
+    posthog.capture("theme_switch");
   };
   return (
     <button

@@ -12,6 +12,7 @@ import useSectionInView from "@/hooks/useSectionInView";
 import { useActiveSectionContext } from "@/contexts/active-section-context";
 // @ts-ignore
 import { gtag } from "ga-gtag";
+import posthog from "posthog-js";
 const Intro = () => {
   const experienceYears = useExperienceYears({ startYear: 2021 });
   const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
@@ -83,6 +84,7 @@ const Intro = () => {
                 event_category: "contact_me_button_click",
                 event_label: "contact_me_button_click",
               });
+              posthog.capture("contact_me_button_click");
             }}
           >
             Contact me here
@@ -99,6 +101,7 @@ const Intro = () => {
                 event_category: "download_cv_button_click",
                 event_label: "download_cv_button_click",
               });
+              posthog.capture("download_cv_button_click");
             }}
           >
             Download CV
@@ -128,6 +131,7 @@ const Intro = () => {
                 event_category: "github_button_click",
                 event_label: "github_button_click",
               });
+              posthog.capture("github_button_click");
             }}
           >
             <FaGithubSquare />

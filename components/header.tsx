@@ -7,6 +7,7 @@ import clsx from "clsx";
 import { useActiveSectionContext } from "@/contexts/active-section-context";
 // @ts-ignore
 import { gtag } from "ga-gtag";
+import posthog from "posthog-js";
 
 const Header = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
@@ -47,6 +48,7 @@ const Header = () => {
                     event_category: "navigation",
                     event_label: link.name,
                   });
+                  posthog.capture("navigation", { anchor: link.name });
                 }}
               >
                 {link.name}

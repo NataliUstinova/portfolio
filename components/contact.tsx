@@ -8,6 +8,7 @@ import SubmitButton from "@/components/submit-btn";
 import toast from "react-hot-toast";
 // @ts-ignore
 import { gtag } from "ga-gtag";
+import posthog from "posthog-js";
 
 const Contacts = () => {
   const { ref } = useSectionInView({
@@ -62,6 +63,7 @@ const Contacts = () => {
             event_category: "engagement",
             event_label: "email_sent",
           });
+          posthog.capture("email_sent");
           toast.success("Email sent successfully!");
         }}
       >
