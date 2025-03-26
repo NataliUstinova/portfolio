@@ -16,6 +16,8 @@
     "framer-motion": "^10.16.5",
     "ga-gtag": "^1.2.0",
     "next": "14.0.3",
+    "posthog-js": "^1.232.7",
+    "posthog-node": "^4.10.2",
     "react": "^18",
     "react-dom": "^18",
     "react-hot-toast": "^2.4.1",
